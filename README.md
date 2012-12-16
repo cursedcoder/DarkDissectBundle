@@ -145,6 +145,6 @@ echo $language->read('6 ** (1 + 1) ** 2 * (5 + 4)'); // 11664
 
 Credits
 =======
-Evgeniy Guseletov [cursedcoder](http://github.com/cursedcoder) [creator of bundle]
-Jakub Lédl [jakubledl](http://github.com/jakubledl) [creator of Dissect]
-[Other awesome developers](http://github.com/cursedcoder/DarkDissectBundle/contributors)
+* Evgeniy Guseletov [cursedcoder](http://github.com/cursedcoder) [creator of bundle]
+* Jakub Lédl [jakubledl](http://github.com/jakubledl) [creator of Dissect]
+* [Other awesome developers](http://github.com/cursedcoder/DarkDissectBundle/contributors)
