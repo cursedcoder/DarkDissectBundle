@@ -58,7 +58,7 @@ language:
         rules:
             - additive:
                 statement: [additive, +, multiplicative]
-                call: ~ # will call calculator context, method multiplicative by default
+                call: ~ # will call calculator context, method additive by default
                 # call: { context: MyCustomContext, method: MyCustomMethod }
 
             - additive:
