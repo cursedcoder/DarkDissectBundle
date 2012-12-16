@@ -6,6 +6,11 @@ use Dissect\Lexer\Lexer;
 use Dissect\Parser\LALR1\LALR1Parser;
 use Dissect\Parser\Grammar;
 
+/**
+ * Language class, with precomputed lexer and grammar
+ *
+ * @author Evgeniy Guseletov <d46k16@gmail.com>
+ */
 class Language
 {
     private $lexer;

@@ -2,6 +2,12 @@
 
 namespace Dark\DissectBundle\Builder;
 
+/**
+ * Storage languages
+ *
+ * @todo Add caching feature
+ * @author Evgeniy Guseletov <d46k16@gmail.com>
+ */
 class LanguageRepository
 {
     private $lb;
@@ -15,11 +21,17 @@ class LanguageRepository
         $this->pathHolder = array();
     }
 
+    /**
+     * Adds path to languages YAML configs
+     */
     public function addPath($name, $path)
     {
         $this->pathHolder[$name] = $path;
     }
-    
+
+    /**
+     * Builds language if not built yet.
+     */
     public function get($name)
     {
         if (isset($this->languageHolder[$name])) {

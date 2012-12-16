@@ -11,6 +11,11 @@ use Symfony\Component\Yaml\Yaml;
 
 use Dark\DissectBundle\Context\ContextInterface;
 
+/**
+ * Builds new Language using custom Contexts and YAML config
+ *
+ * @author Evgeniy Guseletov <d46k16@gmail.com>
+ */
 class LanguageBuilder
 {
     private $contextHolder;
