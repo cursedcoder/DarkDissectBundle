@@ -1,0 +1,39 @@
+{
+    "name": "cursedcoder/dark-dissect-bundle",
+    "description": "Integrates Dissect into Symfony2 application",
+    "keywords": ["lexing", "parsing", "ast", "parser", "symfony", "bundle"],
+    "homepage": "https://github.com/cursedcoder/DarkDissectBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Evgeniy Guseletov",
+            "email": "d46k16@gmail.com"
+        },
+        {
+            "name": "Symfony Community",
+            "homepage": "http://github.com/cursedcoder/DarkDissectBundle/contributors"
+        }
+    ],
+
+    "minimum-stability": "dev",
+
+    "require": {
+        "php": ">=5.3.3",
+        "jakubledl/dissect": "dev-master",
+        "symfony/framework-bundle": ">=2.0.0"
+    },
+
+    "require-dev": {
+        "phpspec/phpspec2": "dev-develop"
+    },
+
+    "autoload": {
+        "psr-0": { "Dark\\DissectBundle": "" }
+    },
+
+    "config": {
+        "bin-dir": "bin"
+    },
+
+    "target-dir": "Dark/DissectBundle"
+}
