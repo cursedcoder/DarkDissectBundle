@@ -79,8 +79,8 @@ class LanguageBuilder
                 $rule = $grammar->rule($ruleName, $ruleData['statement']);
 
                 if (isset($ruleData['call'])) {
-                    $context = isset($ruleData['context']) ? $this->getContext($ruleData['context']) : $defaultContext;
-                    $method = isset($ruleData['method']) ? $ruleData['method'] : $ruleName;
+                    $context = isset($ruleData['call']['context']) ? $this->getContext($ruleData['call']['context']) : $defaultContext;
+                    $method = isset($ruleData['call']['method']) ? $ruleData['call']['method'] : $ruleName;
 
                     $rule->call(array($context, $method));
                 }
