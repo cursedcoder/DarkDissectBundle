@@ -33,7 +33,7 @@ class LanguageRepository extends ObjectBehavior
 
     function its_get_accessor_should_throw_exception_if_language_not_found()
     {
-        $this->shouldThrow('Exception')->duringGet('asdasdasdjkh23231');
+        $this->shouldThrow('Exception')->duringGet('not_existing_language_version_2225');
     }
 
     /**

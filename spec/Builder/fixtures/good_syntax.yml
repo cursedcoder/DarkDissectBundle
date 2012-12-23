@@ -1,0 +1,26 @@
+language:
+    lexis:
+        regex:
+            int: '/[1-9][0-9]*/'
+            wsp: '/[ \r\n\t]+/'
+        tokens:
+            - "("
+            - ")"
+            - "+"
+            - "*"
+            - "**"
+        skip: [wsp]
+
+    grammar:
+        start_rule: additive
+        default_context: Context
+        rules:
+            - additive:
+                statement: [additive, +, multiplicative]
+                call: ~
+
+            - additive:
+                statement: [multiplicative]
+
+            - primary:
+                statement: [int]

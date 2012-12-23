@@ -19,7 +19,7 @@
 
     "require": {
         "php": ">=5.3.3",
-        "jakubledl/dissect": "0.9.0",
+        "jakubledl/dissect": "dev-master",
         "symfony/framework-bundle": ">=2.0.0"
     },
 

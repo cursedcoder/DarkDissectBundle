@@ -29,7 +29,9 @@ class BuildLanguagesPass implements CompilerPassInterface
         $repositoryDefinition = $container->getDefinition('dissect.language_repository');
 
         foreach ($config as $languageName => $languageData) {
-            $path = $container->getParameterBag()->resolveValue($languageData['path']);
+            //$path = $container->getParameterBag()->resolveValue($languageData['path']);
+            $path = $container->get('kernel')->locateResource($languageData['path']);
+
             $repositoryDefinition->addMethodCall('addPath', array($languageName, $path));
         }
     }
