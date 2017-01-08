@@ -3,8 +3,8 @@
 namespace Dark\DissectBundle\Builder;
 
 use Dissect\Lexer\Lexer;
-use Dissect\Parser\LALR1\LALR1Parser;
 use Dissect\Parser\Grammar;
+use Dissect\Parser\LALR1\Parser;
 
 /**
  * Language class, with precomputed lexer and grammar
@@ -19,7 +19,7 @@ class Language
     public function __construct(Lexer $lexer, Grammar $grammar)
     {
         $this->lexer = $lexer;
-        $this->parser = new LALR1Parser($grammar);
+        $this->parser = new Parser($grammar);
     }
 
     public function read($string)

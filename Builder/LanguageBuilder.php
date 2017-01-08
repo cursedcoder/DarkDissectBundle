@@ -33,7 +33,7 @@ class LanguageBuilder
     public function build($path)
     {
         $fileLocator = new FileLocator();
-        $languageSource = Yaml::parse($fileLocator->locate($path));
+        $languageSource = Yaml::parse(file_get_contents($fileLocator->locate($path)));
 
         $processor = new Processor();
         $configuration = new LanguageConfiguration();
@@ -76,7 +76,8 @@ class LanguageBuilder
 
         foreach ($grammarSource['rules'] as $ruleSource) {
             foreach ($ruleSource as $ruleName => $ruleData) {
-                $rule = $grammar->rule($ruleName, $ruleData['statement']);
+                $rule = $grammar($ruleName);
+                call_user_func_array([$rule, 'is'], $ruleData['statement']);
 
                 if (isset($ruleData['call'])) {
                     $context = isset($ruleData['call']['context']) ? $this->getContext($ruleData['call']['context']) : $defaultContext;
