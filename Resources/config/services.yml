@@ -1,15 +1,15 @@
 parameters:
-    dissect.analyzer.class: Dissect\Parser\LALR1\Analysis\Analyzer
-    dissect.language_builder.class: Dark\DissectBundle\Builder\LanguageBuilder
-    dissect.language_repository.class: Dark\DissectBundle\Builder\LanguageRepository
+    dissect.analyzer.class: 'Dissect\Parser\LALR1\Analysis\Analyzer'
+    dissect.language_builder.class: 'Dark\DissectBundle\Builder\LanguageBuilder'
+    dissect.language_repository.class: 'Dark\DissectBundle\Builder\LanguageRepository'
 
 services:
     dissect.lalr1_analyzer:
-        class: %dissect.analyzer.class%
+        class: '%dissect.analyzer.class%'
 
     dissect.language_builder:
-        class: %dissect.language_builder.class%
+        class: '%dissect.language_builder.class%'
 
     dissect.language_repository:
-        class: %dissect.language_repository.class%
-        arguments: [@dissect.language_builder]
+        class: '%dissect.language_repository.class%'
+        arguments: ['@dissect.language_builder']
